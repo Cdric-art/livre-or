@@ -1,11 +1,14 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const path = require('path');
 const mysql = require('mysql');
+const bodyParser = require('body-parser');
+
+const commentRoutes = require('./routes/comment.routes');
 
 const dotenv = require('dotenv');
 dotenv.config();
 
-const commentRoutes = require('./routes/comment.routes');
+const db = require('./database/slqConnection');
 
 const app = express();
 
@@ -16,7 +19,12 @@ app.use((req, res, next) => {
 	next();
 });
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
+app.get('/', (req, res) => {
+	res.status(200).sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+});
 
 app.use('/api', commentRoutes);
 
