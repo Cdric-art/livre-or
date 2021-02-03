@@ -24,11 +24,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="8c162018-3257-4ddc-948b-75e5dc9ad3de">
-        <schema name="livre_or" object-types="dataset trigger, procedure, table, constraint, function, index, view, column" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="8c162018-3257-4ddc-948b-75e5dc9ad3de">

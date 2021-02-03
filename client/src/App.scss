@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -37,6 +36,25 @@
   }
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+p {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.container__comments {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  width: 80%;
+}
+
+.container__comment {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
 }
