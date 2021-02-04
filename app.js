@@ -1,31 +1,29 @@
-const express = require('express');
-const path = require('path');
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
+const express = require('express')
+const path = require('path')
+const mysql = require('mysql')
+const bodyParser = require('body-parser')
 
-const commentRoutes = require('./routes/comment.routes');
+const commentRoutes = require('./routes/comment.routes')
 
-const dotenv = require('dotenv');
-dotenv.config();
+const dotenv = require('dotenv')
+dotenv.config()
 
-const db = require('./database/slqConnection');
-
-const app = express();
+const app = express()
 
 app.use((req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
-	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-	next();
-});
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+	res.setHeader('Access-Control-Allow-Origin', '*')
+	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization')
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS')
+	next()
+})
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 
-app.use(express.static(path.join(__dirname, 'client', 'dist')));
+app.use(express.static(path.join(__dirname, 'client', 'dist')))
 app.get('/', (req, res) => {
-	res.status(200).sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-});
+	res.status(200).sendFile(path.join(__dirname, 'client', 'dist', 'index.html'))
+})
 
-app.use('/api', commentRoutes);
+app.use('/api', commentRoutes)
 
-module.exports = app;
+module.exports = app

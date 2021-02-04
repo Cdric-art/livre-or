@@ -1,11 +1,11 @@
 export const dateParser = (date) => {
 	let options = {
-		hour: '2-digit',
-		minute: '2-digit',
-		second: '2-digit',
-		weekday: 'long',
+		// hour: '2-digit',
+		// minute: '2-digit',
+		// second: '2-digit',
+		weekday: 'short',
 		year: 'numeric',
-		month: 'short',
+		month: 'long',
 		day: 'numeric'
 	};
 

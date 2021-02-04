@@ -13,7 +13,6 @@ function App() {
 				<p>Hello Vite + React!</p>
 				<p>Backend : Node - Express - mySql</p>
 				<AllComments/>
-				<AddComment/>
 			</header>
 		</div>
 	)

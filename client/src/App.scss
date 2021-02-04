@@ -48,7 +48,6 @@ h2 {
   border: 1px solid #ffffff;
   border-radius: 8px;
   padding: 1rem 2rem;
-  width: 80%;
 }
 
 .container__comment {
@@ -57,4 +56,32 @@ h2 {
   grid-gap: 10px;
   justify-items: center;
   align-items: center;
+}
+
+.addComment {
+  margin: 2rem 0;
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+
+    .label {
+      font-size: 1rem;
+    }
+
+    .input {
+      width: 100%;
+      min-height: 50px;
+      border-radius: 8px;
+    }
+
+    .btn {
+      padding: 7px 10px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+  }
 }
