@@ -1,6 +1,5 @@
 const express = require('express')
 const path = require('path')
-const mysql = require('mysql')
 const bodyParser = require('body-parser')
 
 const commentRoutes = require('./routes/comment.routes')
